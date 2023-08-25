@@ -1,0 +1,11 @@
+._ {
+  @apply flex flex-row gap-1 bg-white border-[1px] border-gray-300 rounded w-full p-1.5;
+}
+
+._ input {
+  @apply text-sm outline-none w-full bg-white;
+}
+
+._:focus-within {
+  @apply border-gray-400;
+}

@@ -1,0 +1,25 @@
+.card {
+  @apply relative rounded-lg h-60 border overflow-hidden cursor-pointer border-secondary;
+  transition: all 500msm ease-in;
+}
+
+.shadow {
+  @apply absolute w-full h-full opacity-0 bg-black;
+  transition: all 250ms ease-in;
+}
+
+.title {
+  @apply absolute w-full text-center font-semibold text-4xl text-white;
+  bottom: -20%;
+  transition: all 200ms ease-in;
+}
+
+
+
+.card:hover .shadow {
+  @apply opacity-40;
+}
+
+.card:hover .title {
+  bottom: 20%;
+}

@@ -1,0 +1,28 @@
+.card {
+  @apply h-64 flex flex-col pb-2 rounded shadow-sm border overflow-hidden cursor-pointer border-secondary;
+}
+
+.image {
+  @apply h-[65%] w-full relative;
+}
+
+.image .shadow {
+  @apply absolute w-full h-full bg-black opacity-0;
+  transition: all 250ms linear;
+}
+
+.image .actions {
+  @apply gap-1 absolute w-full h-full;
+  transition: all 200ms ease-in;
+  opacity: 0;
+}
+
+
+.image:hover .shadow {
+  opacity: 0.4;
+}
+
+.image:hover .actions {
+  opacity: 1;
+}
+

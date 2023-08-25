@@ -1,0 +1,26 @@
+.wrapper {
+  @apply relative flex flex-row items-center justify-between px-2 py-1.5 rounded border cursor-pointer border-dividerColor;
+}
+
+.arrow {
+  @apply fill-primary;
+  transition: all 200ms linear;
+  transform: rotate(180deg);
+}
+
+.options {
+  @apply absolute h-full w-full left-0 bottom-[-5px] translate-y-[100%] rounded border overflow-hidden border-dividerColor bg-white;
+  visibility: hidden;
+  max-height: 0;
+  height: fit-content;
+  transition: all 200ms ease-in;
+}
+
+.options-active {
+  max-height: 999px;
+  visibility: visible;
+}
+
+.arrow-active {
+  transform: rotate(0deg);
+}

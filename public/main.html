@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main</title>
+
+    <!-- For development only comment this in production -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="src/assets/css/main.css" />
+
+    <script type="text/javascript" src="src/assets/js/main.js"></script>
+  </head>
+  <body>
+    <div class="background">
+      <div class="layer"></div>
+      <img
+        class="w-full min-h-full object-cover"
+        src="src/assets/images/background.webp"
+      />
+      <div class="absolute flex flex-col gap-2 font-semibold">
+        <h1 class="text-8xl text-white">
+          Supra MK<span class="text-red-700">5</span>
+        </h1>
+        <label class="text-xl italic text-gray-500">
+          The performance, perfection
+        </label>
+      </div>
+    </div>
+
+    <nav id="navbar" class="navbar">
+      <ul class="menu">
+        <!-- <img class="w-20 h-16" src="src/assets/logo.png" alt="logo" /> -->
+        <a>Toyota</a>
+        <a>About us</a>
+        <div class="separator"></div>
+        <a>Contact</a>
+        <div class="separator"></div>
+        <a>Career</a>
+        <div class="separator"></div>
+        <a href="/">Shop</a>
+        <!-- <div>About us</div>
+            <span>·</span>
+            <div>Contact</div>
+            <span>·</span>
+            <div>Career</div>
+            <span>·</span>
+            <div>Shop</div>
+        </div> -->
+      </ul>
+    </nav>
+
+    <div class="absolute top-[100vh] w-full z-10">
+      <div class="w-full h-[100vh] bg-white"></div>
+      <div class="w-full h-[100vh] bg-white"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+.appbar {
+  @apply fixed top-0 w-full z-50;
+}
+
+.bar {
+  @apply h-20 bg-primary;
+}
+
+.wrapper {
+  @apply mx-auto w-[80%] h-full flex flex-row gap-4 items-center;
+}
+
+.logo {
+  @apply !w-[20%] relative text-3xl pb-1 font-semibold text-onPrimary;
+}
+
+.logo span {
+  @apply absolute bottom-0 translate-x-[-100%] translate-y-[40%] text-sm text-primary-400;
+}
+
+.searchbar {
+  @apply !w-[60%] justify-center mx-auto h-full;
+}
+
+.category {
+  @apply flex flex-col justify-center cursor-pointer text-lg text-onPrimary hover:text-secondary;
+}
+
+.actions {
+  @apply !w-[30%] flex flex-row justify-end gap-4 text-onPrimary;
+}
+
+.modal {
+  @apply absolute -top-56 w-[50%] h-56 rounded-b-lg border border-dividerColor bg-white text-primary;
+  z-index: -1;
+  left: 50%;
+
+  transform: translateX(-50%);
+  transition: all 200ms ease-in;
+}
+
+.modal-active {
+  @apply top-20;
+}
+
+.category:hover {
+  @apply h-full;
+}

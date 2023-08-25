@@ -1,0 +1,44 @@
+.navbar {
+  @apply fixed top-0 z-40 h-16 w-full px-6 bg-transparent;
+
+  animation: navbar-animation 1s linear forwards;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+.navbar .menu {
+  @apply flex flex-row items-center gap-4 h-full;
+}
+
+.navbar .menu a {
+  @apply cursor-pointer text-xl pb-1 text-gray-300 hover:text-gray-500;
+}
+
+.navbar .menu a:first-child {
+  @apply font-semibold text-2xl mr-auto;
+}
+
+.navbar .menu .separator {
+  @apply w-[0.8px] h-1/3 bg-gray-300;
+}
+
+.background {
+  @apply fixed flex items-center justify-center h-screen w-full -z-10;
+}
+
+.background .layer {
+  @apply absolute w-full h-full opacity-50 bg-black;
+}
+
+@keyframes navbar-animation {
+  0% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: rgb(31 41 55);
+  }
+}

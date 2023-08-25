@@ -1,0 +1,20 @@
+.grid-menus {
+  @apply grid h-full;
+  grid-template-columns: 40% 20% 20% 20%;
+}
+
+.grid-menus h3 {
+  @apply font-semibold text-lg mb-2;
+}
+
+.grid-menus ul {
+  @apply flex flex-col gap-2;
+}
+
+.grid-menus ul a {
+  @apply text-base text-primary-400 w-max;
+}
+
+.grid-menus ul a:hover {
+  @apply text-primary-200;
+}

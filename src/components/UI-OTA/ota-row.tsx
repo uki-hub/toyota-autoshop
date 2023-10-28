@@ -1,28 +1,24 @@
-import {
-  FlexCrossAxisAlingment,
-  FlexMainAxisAlingment,
-} from "./_types.tsx";
+import { AriaAttributes, DOMAttributes, HTMLAttributes } from "react";
+import { FlexCrossAxisAlingment, FlexMainAxisAlingment } from "./_types.tsx";
 
-type Props = {
+interface Props
+  extends HTMLAttributes<HTMLDivElement>,
+    AriaAttributes,
+    DOMAttributes<HTMLDivElement> {
+  center?: boolean | undefined;
   mainAxis?: FlexMainAxisAlingment;
   crossAxis?: FlexCrossAxisAlingment;
-  className?: string;
-  onClick?: () => void;
-};
+}
 
-const OtaRow = (
-  props: React.PropsWithChildren<Props> = {
-    mainAxis: "start",
-    crossAxis: "start",
-  }
-) => {
-  const mainAxis = props.mainAxis ? ` justify-${props.mainAxis}` : "";
-  const crossAxis = props.crossAxis ? ` items-${props.crossAxis}` : "";
-
+const OtaRow = (props: React.PropsWithChildren<Props>) => {
   return (
     <div
-      className={`flex flex-row${mainAxis}${crossAxis} ${props.className ?? ""}`}
-      onClick={props.onClick}
+      {...props}
+      className={`flex flex-row ${props.className ?? ""}`}
+      style={{
+        justifyContent: props.mainAxis,
+        alignItems: props.crossAxis,
+      }}
     >
       {props.children}
     </div>

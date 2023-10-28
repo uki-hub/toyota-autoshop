@@ -7,6 +7,11 @@ import ProductPage from "./pages/product-page.tsx";
 import HomePage from "./pages/home-page.tsx";
 import Footer from "./components/UI/footer.tsx";
 import Backdrop from "./components/UI/backdrop.tsx";
+import SearchPage from "./pages/search-page.tsx";
+import CartPage from "./pages/cart-page.tsx";
+import NotificationPage from "./pages/notification-page.tsx";
+import MePage from "./pages/me-page.tsx";
+import CheckoutPage from "./pages/checkout-page.tsx";
 
 const router = createBrowserRouter([
   {
@@ -31,7 +36,23 @@ const router = createBrowserRouter([
       },
       {
         path: "/search",
-        element: <label>search</label>,
+        element: <SearchPage />,
+      },
+      {
+        path: "/cart",
+        element: <CartPage />,
+      },
+      {
+        path: "/notification",
+        element: <NotificationPage />,
+      },
+      {
+        path: "/me",
+        element: <MePage />,
+      },
+      {
+        path: "/checkout",
+        element: <CheckoutPage />,
       },
     ],
   },

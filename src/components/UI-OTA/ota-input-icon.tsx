@@ -1,10 +1,11 @@
-import { InputHTMLAttributes, ReactNode } from "react";
+import { InputHTMLAttributes, LegacyRef, ReactNode } from "react";
 import styles from "./ota-input.module.css";
 import { Sizing } from "./_types.tsx";
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
-  leftIcon?: ReactNode;
-  rightIcon?: ReactNode;
+  inputRef?: LegacyRef<HTMLInputElement>;
+  leftIconElement?: ReactNode;
+  rightIconElement?: ReactNode;
   gap?: Sizing;
   inputClassName?: string;
   boxClassName?: string;
@@ -19,9 +20,13 @@ const OtaInputIcon = (props: Props) => {
         props.boxClassName
       }`}
     >
-      {props.leftIcon && props.leftIcon}
-      <input {...props} className={props.inputClassName + ""} />
-      {props.rightIcon && props.rightIcon}
+      {props.leftIconElement && props.leftIconElement}
+      <input
+        ref={props.inputRef}
+        {...props}
+        className={props.inputClassName + ""}
+      />
+      {props.rightIconElement && props.rightIconElement}
     </div>
   );
 };

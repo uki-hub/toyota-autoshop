@@ -4,7 +4,7 @@ import OtaCol from "./ota-col.tsx";
 import classes from "./ota-select.module.css";
 import { IoIosArrowUp } from "react-icons/io";
 
-const OtaSelect = () => {
+const OtaSelectBuilder = () => {
   const [show, setShow] = useState(false);
 
   return (
@@ -29,4 +29,4 @@ const OtaSelect = () => {
   );
 };
 
-export default OtaSelect;
+export default OtaSelectBuilder;

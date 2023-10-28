@@ -5,7 +5,7 @@
 .arrow {
   @apply fill-primary;
   transition: all 200ms linear;
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
 }
 
 .options {

@@ -27,7 +27,7 @@
 }
 
 .actions {
-  @apply !w-[30%] flex flex-row justify-end gap-4 text-onPrimary;
+  @apply !w-[30%] h-full flex flex-row items-center justify-end gap-4 text-xl text-onPrimary;
 }
 
 .modal {
@@ -45,4 +45,55 @@
 
 .category:hover {
   @apply h-full;
+}
+
+.cart-wrapper {
+  position: relative;
+  width: 18px;
+  height: 18px
+}
+
+.cart {
+  @apply absolute;
+}
+
+.cart-active {
+  @apply absolute;
+  display: none;
+}
+
+.cart-wrapper:hover .cart {
+  @apply hidden;
+}
+
+.cart-wrapper:hover .cart-active {
+  @apply block;
+}
+
+
+.bell-wrapper {
+  position: relative;
+  width: 18px;
+  height: 18px
+}
+
+.bell {
+  @apply absolute;
+}
+
+.bell-active {
+  @apply absolute;
+  display: none;
+}
+
+.bell-wrapper:hover .bell {
+  @apply hidden;
+}
+
+.bell-wrapper:hover .bell-active {
+  @apply block;
+}
+
+.badge {
+  @apply absolute right-[-5px] top-[-5px] w-4 h-4 flex flex-col items-center text-xs rounded-full text-primary bg-splashColor;
 }

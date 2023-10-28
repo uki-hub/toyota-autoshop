@@ -39,7 +39,7 @@ export type FlexMainAxisAlingment =
   | "start"
   | "end"
   | "center"
-  | "between"
+  | "space-between"
   | "around"
   | "evently"
   | "strecth"

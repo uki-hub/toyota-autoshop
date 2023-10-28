@@ -1,12 +1,18 @@
 import { Link } from "react-router-dom";
 import OtaCol from "../UI-OTA/ota-col.tsx";
 import OtaRow from "../UI-OTA/ota-row.tsx";
-import SvgIcons from "../UI/svg-icons.tsx";
-import classes from './product-card.module.css';
+import classes from "./product-card.module.css";
+import AppIcons from "../UI/app-icons.tsx";
 
 const ProductCard = () => {
+  const r = (Math.random() + 1).toString(36).substring(7);
+
   return (
-    <Link to="product/abc123" preventScrollReset={false} className={classes.card}>
+    <Link
+      to={`/product/${r}`}
+      preventScrollReset={false}
+      className={classes.card}
+    >
       <div className={classes.image}>
         <img
           className="absolute h-full w-full object-contain"
@@ -18,24 +24,19 @@ const ProductCard = () => {
           crossAxis="center"
           mainAxis="center"
         >
-          <SvgIcons.Search fillColor="white" size={{ height: 36, width: 36 }} />
-          <SvgIcons.Heart fillColor="white" size={{ height: 36, width: 36 }} />
-          <SvgIcons.Cart fillColor="white" size={{ height: 36, width: 36 }} />
+          <AppIcons.Search />
+          <AppIcons.HeartOutline />
+          <AppIcons.CartAdd />
         </OtaRow>
       </div>
 
-      <OtaCol className="h-[35%] px-2.5 justify-between">
+      <OtaCol className="h-[35%] px-3 pb-2.5 justify-between">
         <h2 className="line-clamp-2">Supra MK5 2023, Premium Red</h2>
-        <OtaRow className="gap-2" crossAxis="center">
-          <label className="font-bold">Rp2.950.000.000</label>
-          <OtaRow className="gap-0.5 text-sm text-gray-400" crossAxis="center">
-            {"("}
-            <SvgIcons.Star
-              size={{ height: 14, width: 14 }}
-              fillColor="#b3b3b3"
-            />
-            <span>4.9</span>
-            {")"}
+        <OtaRow className="gap-2 w-full" crossAxis="center">
+          <div className="font-bold">Rp2.950.000.000</div>
+          <OtaRow className="ml-auto gap-0.5 text-sm text-gray-400" crossAxis="center">
+            <AppIcons.Star />
+            4.9
           </OtaRow>
         </OtaRow>
       </OtaCol>

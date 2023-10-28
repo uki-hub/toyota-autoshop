@@ -1,5 +1,5 @@
 .card {
-  @apply h-64 flex flex-col pb-2 rounded shadow-sm border overflow-hidden cursor-pointer border-secondary;
+  @apply h-64 flex flex-col rounded shadow-sm border overflow-hidden cursor-pointer border-secondary;
 }
 
 .image {
@@ -12,9 +12,13 @@
 }
 
 .image .actions {
-  @apply gap-1 absolute w-full h-full;
+  @apply gap-1 absolute w-full h-full text-3xl text-white;
   transition: all 200ms ease-in;
   opacity: 0;
+}
+
+.image .actions *  {
+  @apply hover:text-gray-300;
 }
 
 

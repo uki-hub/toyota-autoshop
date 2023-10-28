@@ -18,7 +18,7 @@ const OtaRepeaterEmpty = (props: Props) => {
   return (
     <OtaRepeater
       array={Array(count).fill(null)}
-      f={(_, i) => props.f(i, count)}
+      builder={(_, i) => props.f(i, count)}
     />
   );
 };

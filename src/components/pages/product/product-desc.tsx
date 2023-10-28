@@ -3,7 +3,8 @@ import OtaRepeater from "../../UI-OTA/builder/ota-repeater.tsx";
 import OtaCol from "../../UI-OTA/ota-col.tsx";
 import OtaLine from "../../UI-OTA/ota-line.tsx";
 import OtaRow from "../../UI-OTA/ota-row.tsx";
-import SvgIcons from "../../UI/svg-icons.tsx";
+import OtaCircle from "../../UI-OTA/ota-circle.tsx";
+import AppIcons from "../../UI/app-icons.tsx";
 
 const ProductDesc = () => {
   return (
@@ -30,35 +31,36 @@ const ProductDesc = () => {
       <OtaCol className="gap-1 text-sm w-full">
         <OtaRow className="justify-between items-center">
           <h1 className="text-2xl font-semibold">Supra MK5 Premium Red</h1>
-          <div>
-            <SvgIcons.Info
-              fillColor="#d1d1d1"
-              className="cursor-pointer hover:fill-gray-50"
-            />
-          </div>
+          <AppIcons.Info className=" text-[20px] cursor-pointer text-gray-300 hover:text-gray-400" />
         </OtaRow>
 
         <OtaRow className="gap-4">
-          <label>
+          <div>
             Terjual&nbsp;<span className="text-gray-500">14</span>
-          </label>
-          <label>
+          </div>
+          <div>
             Rating&nbsp;<span className="text-gray-500">4.8</span>&nbsp;
             <span className="text-gray-400">(10 Ulasan)</span>
-          </label>
+          </div>
         </OtaRow>
         <OtaRow className="justify-between items-center mt-3">
           <h2 className="font-bold text-3xl">Rp2.950.000.000</h2>
-          <OtaRow className="gap-2 justify-center stroke-gray-400">
-            <SvgIcons.Heart />
-            <SvgIcons.QuestionMark />
-            <SvgIcons.Share />
+          <OtaRow className="gap-0.5 justify-center text-2xl text-gray-600 ">
+            <OtaCircle className="p-1.5 cursor-pointer hover:text-gray-800 hover:bg-gray-100">
+              <AppIcons.HeartOutline />
+            </OtaCircle>
+            <OtaCircle className="p-1.5 cursor-pointer hover:text-gray-800 hover:bg-gray-100">
+              <AppIcons.MessageQuestion />
+            </OtaCircle>
+            <OtaCircle className="p-1.5 cursor-pointer hover:text-gray-800 hover:bg-gray-100">
+              <AppIcons.Share />
+            </OtaCircle>
           </OtaRow>
         </OtaRow>
         <OtaRow className="gap-2 mt-3 mb-2">
           <OtaRepeater
             array={["Red", "Black", "Grey", "Blue"]}
-            f={(d, i) => {
+            builder={(d, i) => {
               const disabledClass =
                 i == 3
                   ? " bg-gray-100 !text-gray-400 border-gray-100 cursor-default hover:bg-gray-100"

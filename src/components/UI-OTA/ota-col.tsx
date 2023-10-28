@@ -1,23 +1,24 @@
+import { AriaAttributes, DOMAttributes, HTMLAttributes } from "react";
 import { FlexCrossAxisAlingment, FlexMainAxisAlingment } from "./_types.tsx";
 
-type Props = {
+interface Props
+  extends HTMLAttributes<HTMLDivElement>,
+    AriaAttributes,
+    DOMAttributes<HTMLDivElement> {
+  center?: boolean | undefined;
   mainAxis?: FlexMainAxisAlingment;
   crossAxis?: FlexCrossAxisAlingment;
-  className?: string;
-};
+}
 
-const OtaCol = (
-  props: React.PropsWithChildren<Props> = {
-    mainAxis: "start",
-    crossAxis: "start",
-  }
-) => {
-  const mainAxis = props.mainAxis ? ` justify-${props.mainAxis}` : "";
-  const crossAxis = props.crossAxis ? ` items-${props.crossAxis}` : "";
-
+const OtaCol = (props: React.PropsWithChildren<Props>) => {
   return (
     <div
-      className={`flex flex-col${mainAxis}${crossAxis} ${props.className ?? ""}`}
+      {...props}
+      className={`flex flex-col ${props.className ?? ""}`}
+      style={{
+        justifyContent: props.mainAxis,
+        alignItems: props.crossAxis,
+      }}
     >
       {props.children}
     </div>

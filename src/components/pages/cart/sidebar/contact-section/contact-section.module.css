@@ -1,0 +1,3 @@
+.button {
+  @apply rounded-full p-0.5 text-base cursor-pointer text-onPrimary bg-primary hover:bg-primary-700 active:bg-primary-800;
+}
